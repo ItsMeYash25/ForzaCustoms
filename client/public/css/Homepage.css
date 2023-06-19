@@ -1,0 +1,550 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+
+.hide-overflow {
+  overflow: hidden;
+}
+
+/* Home-Style */
+
+.ft1 {
+  background: url("../img/wp1.jpg") no-repeat;
+  background-size: contain;
+  height: 500px;
+  width: 500px;
+}
+
+.ft2 {
+  background: url("../img/wp4.jpg") no-repeat;
+  background-size: contain;
+  height: 500px;
+  width: 500px;
+}
+
+.ft3 {
+  background: url("../img/wp6.jpg") no-repeat;
+  background-size: contain;
+  height: 500px;
+  width: 500px;
+}
+
+.forza-bg {
+  background-color: rgb(202, 42, 74);
+}
+
+.forza-color {
+  color: rgb(202, 42, 74);
+}
+
+.home-btn {
+  margin: 0 20px 0 20px;
+  text-decoration: none;
+  position: relative;
+  color: whitesmoke;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+  border: transparent;
+}
+.home-btn:hover {
+  margin: 0 20px 0 20px;
+  text-decoration: none;
+  position: relative;
+  color: rgb(245, 245, 245, 0.6);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+  border: transparent;
+}
+.home-btn:visited {
+  margin: 0 20px 0 20px;
+  text-decoration: none;
+  position: relative;
+  color: rgb(245, 245, 245, 0.6);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+  border: transparent;
+}
+.home-btn:active {
+  margin: 0 20px 0 20px;
+  text-decoration: none;
+  position: relative;
+  color: rgb(245, 245, 245, 0.6);
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+  border: transparent;
+}
+
+.top .container {
+  margin-bottom: 5%;
+}
+
+.logo {
+  background-image: url("../img/pic1.png");
+  height: 90px;
+  width: 150px;
+  background-size: cover;
+}
+
+.header-title {
+  text-align: center;
+  font-family: "Bangers", cursive;
+  font-size: 6.75em;
+  color: whitesmoke;
+}
+
+.nav-link {
+  font-size: larger;
+  font-family: "Rajdhani", sans-serif;
+  color: whitesmoke;
+}
+.nav-link:hover {
+  font-size: larger;
+  font-family: "Rajdhani", sans-serif;
+  color: rgb(245, 245, 245, 0.6);
+}
+.nav-link:visited {
+  font-size: larger;
+  font-family: "Rajdhani", sans-serif;
+  color: rgb(245, 245, 245, 0.6);
+}
+.nav-link:active {
+  font-size: larger;
+  font-family: "Rajdhani", sans-serif;
+  color: rgb(245, 245, 245, 0.6);
+}
+
+.nav-link {
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: whitesmoke;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+@media screen and (max-height: 300px) {
+  ul {
+    margin-top: 40px;
+  }
+}
+
+.top {
+  background: url("../img/wp7.jpg") no-repeat center center;
+  height: 1000px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.mid h1 {
+  font-family: "Bangers", cursive;
+  font-size: 5em;
+  color: #3a3e40;
+}
+.mid p {
+  color: #3a3e40;
+  font-family: "Rajdhani", sans-serif;
+  font-size: x-large;
+}
+
+.bottom {
+  background-color: #3a3e40;
+}
+.bottom h1 {
+  font-family: "Bangers", cursive;
+  font-size: 6.75em;
+  color: whitesmoke;
+}
+.bottom p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: x-large;
+  color: whitesmoke;
+}
+
+.featurette-heading {
+  margin: 10% 0 10% 0;
+  font-family: "Bangers", cursive;
+  font-size: 4em;
+  color: whitesmoke;
+}
+
+.footer {
+  color: #3a3e40;
+  font-family: "Rajdhani", sans-serif;
+  font-size: xx-large;
+}
+
+.footer h1 {
+  font-family: "Bangers", cursive;
+  font-size: 3em;
+}
+
+/* Home-Style */
+
+/* Login-Style */
+
+.input-login {
+  text-align: center;
+  margin: 3% 20% 0 20%;
+}
+
+.logo-login {
+  background-image: url("../img/pic1.png");
+  height: 90px;
+  width: 150px;
+  background-size: cover;
+  margin: auto;
+}
+
+.background-login {
+  background: url("../img/wp9.jpg") no-repeat center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.head-login {
+  font-family: "Bangers", cursive;
+  font-size: 3em;
+  color: rgb(202, 42, 74);
+}
+
+.login-form-style {
+  font-family: "Rajdhani", sans-serif;
+  font-size: large;
+}
+
+.login-button-style {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+}
+
+.login-cp-style {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+  color: rgb(202, 42, 74);
+  font-weight: bolder;
+  background-color: rgb(245, 245, 245, 0.6);
+  border-radius: 5px;
+}
+
+/* Login-Style */
+
+/* Signup-Style */
+.background-signup {
+  background: url("../img/wp8.jpg") no-repeat center center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Signup-Style */
+
+/* Parts-Style */
+
+.part-img {
+  border: 3px solid rgb(202, 42, 74);
+  border-radius: 20px;
+  background-size: cover;
+  object-fit: cover;
+  height: 300px;
+}
+
+.parts-page-style {
+  background-color: #3a3e40;
+}
+
+.parts-head-style {
+  border: 10px solid rgb(202, 42, 74);
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.parts-head-style h1 {
+  font-family: "Bangers", cursive;
+  font-size: 3em;
+}
+
+.parts-head-style p {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+}
+
+.part-box {
+  border-radius: 20px;
+  background-color: whitesmoke;
+}
+
+.part-box-font {
+  font-family: "Rajdhani", sans-serif;
+}
+.part-box-font h3 {
+  font-family: "Bangers", cursive;
+  font-size: 2.5em;
+}
+.part-box-font h4 {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2em;
+}
+
+.part-box-btn {
+  border-radius: 15px;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.3em;
+}
+
+.part-box-btn:hover {
+  background-color: #3a3e40;
+}
+/* Parts-Style */
+
+/* Part-Page-Style */
+
+.link-to-part {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1em;
+}
+.link-to-part:hover {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1em;
+}
+.link-to-part:visited {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1em;
+}
+.link-to-part:active {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1em;
+}
+
+.img-thumbnail {
+  border: 3px solid rgb(202, 42, 74);
+  border-radius: 20px;
+}
+
+.part-head {
+  font-family: "Bangers", cursive;
+  font-size: 2.5em;
+}
+
+.part-font {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+}
+
+/* Part-Page-Style */
+
+/* Admin(AddPart) */
+
+.add-part {
+  font-family: "Bangers", cursive;
+  font-size: 2.5em;
+}
+
+.input-font {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+}
+
+/* Admin(AddPart) */
+
+/* Admin(ViewParts) */
+
+.part-table-head {
+  font-family: "Bangers", cursive;
+  font-size: 1.5em;
+}
+
+.part-table-font {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.2em;
+}
+
+/* Admin(ViewParts) */
+
+/* BillingPage */
+
+.cart-head {
+  font-family: "Bangers", cursive;
+  font-size: 2.5em;
+}
+
+.cart-box-head {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.cart-box-content {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1em;
+}
+
+/* BillingPage */
+
+/* Bill */
+
+.bill-head {
+  font-family: "Bangers", cursive;
+}
+
+.bill-end {
+  font-family: "Bangers", cursive;
+  font-size: 1em;
+}
+
+.bill-font {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+}
+
+.bill-details {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.bill-footer {
+  margin-top: 80px;
+}
+
+/* Bill */
+
+/* Warehouse */
+.bill-table-head {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+}
+
+.bill-table-col {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1em;
+}
+
+/* Warehouse */
+
+/* Generate Bill */
+
+.generate-bill-head {
+  font-family: "Bangers", cursive;
+}
+
+.generate-bill-font {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.generate-bill-cart {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+/* Generate Bill */
+
+/* About Us */
+
+.abt-top {
+  background: url("../img/wp10.jpg") no-repeat center center;
+  color: whitesmoke;
+  background-size: cover;
+  height: 915px;
+}
+
+.abt-mid {
+  background-color: rgb(0, 0, 0);
+  color: whitesmoke;
+  background-size: cover;
+  /* height: 915px; */
+}
+
+.abt-bottom {
+  background-color: whitesmoke;
+  color: #3a3e40;
+  background-size: cover;
+}
+
+.fb {
+  background: url("../img/facebook.png");
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+}
+.ig {
+  background: url("../img/instagram.png");
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+}
+.tw {
+  background: url("../img/twitter.png");
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+}
+
+.abt-img {
+  background: url("../img/wp4.jpg") no-repeat center center;
+  height: 500px;
+  background-size: cover;
+  border-radius: 50px;
+}
+
+.abt-text-main {
+  text-align: center;
+  font-family: "Bangers", cursive;
+  font-size: 6.75em;
+  color: whitesmoke;
+  letter-spacing: 2px;
+}
+
+.abt-text-main-dark {
+  text-align: center;
+  font-family: "Bangers", cursive;
+  font-size: 6.75em;
+  color: #3a3e40;
+  letter-spacing: 2px;
+}
+
+.abt-text-normal {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2em;
+  font-weight: bolder;
+  color: whitesmoke;
+}
+/* About Us */
+
+/* Appointment */
+
+.bg-green
+{
+  background-color: rgb(77, 223, 106);
+}
+.bg-green:hover
+{
+  background-color: rgb(77, 223, 106, 0.9);
+}
+
+
+/* Appointment */
