@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
+import Swal from "sweetalert2";
 import { AuthState } from "../context/AuthContext";
 import BackToHome from "./BackToHome";
 
@@ -11,16 +12,30 @@ function Login() {
   const { dispatch } = AuthState();
   async function login(event) {
     event.preventDefault();
-    const res = await axios.post(
-      "/users/login",
-      { email, password },
-      { Credential: true }
-    );
-    const user = res.data;
-    localStorage.setItem("user", JSON.stringify(user));
-    dispatch({ type: "LOGIN", payload: user });
-    if (res.status === 201) {
-      navigate("/");
+
+    try {
+      const res = await axios.post(
+        "/users/login",
+        { email, password },
+        { Credential: true }
+      );
+      const user = res.data;
+      localStorage.setItem("user", JSON.stringify(user));
+      dispatch({ type: "LOGIN", payload: user });
+      if (res.status === 201) {
+        navigate("/");
+      }
+    } catch (error) {
+      if (error.response.status === 401) {
+        Swal.fire({
+          icon: "error",
+          title: "!! INCORRECT CREDENTIALS !!",
+          text: "Please enter correct credentials",
+          button: "OK",
+        });
+        setEmail("");
+        setPassword("");
+      }
     }
   }
 

@@ -8,8 +8,8 @@ const register = asyncHandler(async (req, res) => {
   const { username, email, password } = req.body;
   const userExists = await User.findOne({ email });
   if (userExists) {
-    res.status(400);
-    throw new Error("User already exists");
+    res.status(401).json({message:"User already exists"});
+    // throw new Error("User already exists");
   }
   const user = await User.create({
     username,
@@ -47,8 +47,8 @@ const login = asyncHandler(async (req, res) => {
       token: token,
     });
   } else {
-    res.status(401);
-    throw new Error("Invalid email or password");
+    res.status(401).json({message : "Invalid email or password"});
+    // throw new Error("Invalid email or password");
   }
 });
 // @desc    get User Profile

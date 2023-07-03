@@ -30,42 +30,47 @@ const AppointmentUpdate = () => {
         title: "!! PLEASE FILL IN A MESSAGE !!",
         button: "OK",
       });
-    }
-    else
-    {
-
-      
+    } else {
       try {
         const response = await axios.put("/service/update", {
-        id,
-        status,
-        message,
-      });
-      response.status === 200
-      ? (Swal.fire({
-        icon: "success",
-        title: "!! APPOINTMENT UPDATED !!",
-            button: "OK",
-          })
-      (navigate("/appointment"))
-      )
-
-        : Swal.fire({
-            icon: "error",
-            title: "UPDATION FAILED",
-            text: "Please review the appointment again",
-            button: "OK",
-          });
-        } catch (err) {
-          console.log(err);
-        }
+          id,
+          status,
+          message,
+        });
+        response.status === 200
+          ? Swal.fire({
+              icon: "success",
+              title: "!! APPOINTMENT UPDATED !!",
+              button: "OK",
+            })(navigate("/appointment"))
+          : Swal.fire({
+              icon: "error",
+              title: "UPDATION FAILED",
+              text: "Please review the appointment again",
+              button: "OK",
+            });
+      } catch (err) {
+        console.log(err);
       }
+    }
   }
   return (
     <div>
       <div className="parts-page-style navbar">
         <BackToApts />
       </div>
+      <ul class="list-group">
+        <li class="list-group-item generate-bill-font">ID: {appointment.state._id}</li>
+        <li class="list-group-item generate-bill-font">Name: {appointment.state.firstName + " " + appointment.state.lastName}</li>
+        <li class="list-group-item generate-bill-font">Email: {appointment.state.email}</li>
+        <li class="list-group-item generate-bill-font">Contact Number: {appointment.state.contact_number}</li>
+        <li class="list-group-item generate-bill-font">Address: {appointment.state.address}</li>
+        <li class="list-group-item generate-bill-font">Vehicle Name: {appointment.state.vehicle_name}</li>
+        <li class="list-group-item generate-bill-font">Vehicle Number: {appointment.state.vehicle_number}</li>
+        <li class="list-group-item generate-bill-font">Date: {appointment.state.appointment_date}</li>
+        <li class="list-group-item generate-bill-font">Status: {appointment.state.status}</li>
+        <li class="list-group-item generate-bill-font">Message: {appointment.state.message}</li>
+      </ul>
 
       <div className="row m-4 bill-details">
         <h1 className="h1 bill-head">ACCEPT/DECLINE APPOINTMENT:</h1>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 import { AuthState } from "../context/AuthContext";
 import BackToHome from "./BackToHome";
 
@@ -12,13 +13,37 @@ function Signup() {
   const { dispatch } = AuthState();
   async function register(event) {
     event.preventDefault();
-    const res = await axios.post(
-      "/users/register",
-      { username, email, password },
-      { Credential: true }
-    );
-    if (res.status === 201) {
-      navigate("/login");
+
+    try {
+      const res = await axios.post(
+        "/users/register",
+        { username, email, password },
+        { Credential: true }
+      );
+      if (res.status === 201) {
+        navigate("/login");
+      }
+    } catch (error) {
+      if (error.response.status === 400) {
+        Swal.fire({
+          icon: "error",
+          title: "!! INVALID USER DATA !!",
+          text: "Please fill the fields properly",
+          button: "OK",
+        });
+        setEmail("");
+        setPassword("");
+      }
+      if (error.response.status === 401) {
+        Swal.fire({
+          icon: "error",
+          title: "!! USER ALREADY EXISTS !!",
+          text: "Please choose different credentials",
+          button: "OK",
+        });
+        setEmail("");
+        setPassword("");
+      }
     }
   }
 
